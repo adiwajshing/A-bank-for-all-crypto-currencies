@@ -15,7 +15,7 @@ This is the link to the contract of the DAI token’s code.
 
 I want you to look at the lines 137 - 167. That’s about 30 lines of code. Just a few lines of code that powers an entire crypto currency. DAI, a crypto currency handled by a ERC20 token contract, with a few lines of code has a market cap of more than $5B at the time of this writing!
 
-![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/ba175b33-2835-40d4-b5ea-5e25468b5175.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/dcc9b6b1-e38c-4245-a5c4-02ae6600990a.jpg)
 
 I recommend you to read the lines 120-167, which is the meat of the contract. You should be able to follow what is happening there. We’ve written similar code already in our smart contract, if not more complex!
 
@@ -33,7 +33,7 @@ Head over to uniswap website
 
 In the first dropdown, select ETH and in the second select DAI. We will be giving ETH and receiving DAI in return. 
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/c3221708-d387-459f-8000-b5540f54c8b9.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/7a7bbbe4-d3e8-4011-90e9-d56ad97e8fee.jpg)
 
 Hit Swap.
 
@@ -41,19 +41,19 @@ Your meta mask will open up. Make sure you are on the Ropsten network when Metam
 
 Once the transaction is complete, you’ll see something like this. 
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/c8c7c49c-87c5-4af4-b098-9041a098da5b.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/e6bc51c4-5319-479f-a54c-94d751c86bea.jpg)
 
 We need to add DAI to metamask. What this means is that Metamask doesn’t know or care about all the crypto currencies that exist. You and I can launch a crypto currency right now with 30 lines of code that we saw. Anybody can create a contract and start a crypto currency.
 
 If the currency adheres to the ERC20 standards, Metamask will be able to identify it and you’ll be able to manage your coins from the same metamask wallet.
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/d4d5e484-b9eb-47d9-ba7b-5a3d472046c4.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/89c6cf08-b38e-417e-8008-8b5ea554836e.jpg)
 
 Select Add token.
 
 Now that the token is added, you’ll be able to your DAI balance in your Metamask wallet under the tab “Assets”
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/b2ee0f0c-1b72-4465-880a-415c66b08def.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/9604db3a-7769-4622-b635-dd85939f2e20.jpg)
 
 Just like you own ETH, now you also own DAI!
 ## Accepting ERC20 tokens (DAI etc) into our bank
@@ -69,9 +69,9 @@ The reason we can’t send an ERC20 token to a function just like ETH is because
 
 So, let’s do just that. Like what we had done in Compound example, we’ll have to define the interface and initialize an object with the appropriate smart contract address.
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/762aa0f3-d28c-410f-bb66-654704333bea.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/e211a070-4ca4-493c-b1ff-3a98fa3b5650.jpg)
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/e8bfaea7-f3ee-45f6-b753-0046238732b0.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/237d4ddf-0910-4d64-9fe3-b47e3161e665.jpg)
 
 Explore the code of the DAI ERC20 token on Etherscan. Copy paste the signatures of the functions we’d want to use into the IERC20 interface. Then we will initialize the IERC20 object. But we want to accept ANY ERC20 token, not just DAI. We’ll use a variable address when we initialize the ERC20 token object. So when we need to do a transaction with DAI, we’ll use DAI’s erc20 compliant smart contract address; when we want to use MATIC we’ll use MATIC’s erc20 compliant smart contract address.
 
@@ -101,17 +101,17 @@ The “approval” will have to happen outside the smart contract. Until the app
 
 We will transfer all the money the user has approved into the account of our smart contract. We will then send to the uniswap smart contract for converting to ETH. 
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/3ff5ccb7-c008-4a92-9ebd-4a2d63f7783b.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/1e3ce78b-f2a8-456d-9648-50c3796c0de1.jpg)
 
 Also add a function to get the erc20 token balance of our smart contract, so that we can do a sanity check that everything is working. 
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/9a1f4661-6b8b-4240-8c65-71d16b22888a.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/6ffd7a80-533b-4692-8544-330e33385c3c.jpg)
 
 [https://remix.ethereum.org/\#version=soljson-v0.8.4\+commit.c7e474f2.js&optimize=false&runs=200&gist=1352efedf740d64ad494a3046fd198dd&evmVersion=null](https://remix.ethereum.org/#version=soljson-v0.8.4+commit.c7e474f2.js&optimize=false&runs=200&gist=1352efedf740d64ad494a3046fd198dd&evmVersion=null)
 
 Deploy this on Ropsten and keep the contract address of this smart bank account contract handy. Make sure when you are deploying you select “Smart Bank account” in the dropdown contract, if it’s not already selected.
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/114db479-beed-4f99-adc8-6ba8106cec11.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/8fb111ba-c071-4e6b-a661-a2aff9e0191f.jpg)
 ## approving transfer of DAI
 Now the first step is to approve the transfer of DAI. But this has to happen not on our smart contract but on the smart contract of DAI. We need to interact with the DAI smart contract directly.
 
@@ -131,15 +131,15 @@ Then go to the Contract tab and look for ABI. Copy that too.
 
 Paste the Contract Address and the ABI in the appropriate boxes on [https://ethcontract.app](https://ethcontract.app)
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/26713bdf-2785-4a96-b9f8-7f5e357d177b.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/9006f2bc-bbb7-47d1-8c90-6184cea6cf5b.jpg)
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/ee1a42de-7ebf-4204-a6a0-cee91be35e27.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/6f52fa83-22c1-4f01-adc6-2cf2a0e70ae7.jpg)
 
 Then hit explore contract.
 
 You will see all the functions that can be called in this contract. 
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/291b1d62-7248-4e65-8f25-bf7ad17b5315.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/d168154c-d4da-4fa3-93d9-cd2f58b11c3a.jpg)
 
 Direct Link : [https://tinyurl.com/ropstendai](https://tinyurl.com/ropstendai)
 
@@ -155,7 +155,7 @@ Now you have approved our smart contract to use a certain number of DAI, you can
 
 In the parameter give the Smart Contract of DAI ERC20 Contract address. Because we need to check how many DAI does our smart contract have allowance for.
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/3ec81122-dc26-4f9b-877b-099da589dcdc.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/f937fdeb-24fe-4ef2-b437-897b16bdb243.jpg)
 
 Now that we’ve approved the smart contract to do whatever it wants with the DAIs that we have approved, let us write code so that we 
 
@@ -185,9 +185,9 @@ swapExactTokensForETH (to convert erc20 tokens to eth)
 
 Let’s as always, define the interface with the two functions above and initialize an object with the Uniswap Router contract address. You can look for the signatures of these two functions in the Contract tab on the above etherscan link.
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/1cda3579-68fb-4154-ab60-362b1452bd17.jpg)
+![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/3254b72b-c5cf-460c-81a8-d6729922f4aa.jpg)
 
-![](https://qb-content-staging.s3.ap-south-1.amazonaws.com/public/fb231f7d-06af-4aff-bca3-fd51cb633f77/fcbf9b05-9a1a-4b1c-86ad-da64c9fa4c0a.jpg)
+
 
 Let’s now go to addBalance function and add the code for converting erc20 tokens into eth. I.e. invoke swapExactTokensForETH with the right set of parameters.. 
 
