@@ -15,7 +15,7 @@ This is the link to the contract of the DAI token’s code.
 
 I want you to look at the lines 137 - 167. That’s about 30 lines of code. Just a few lines of code that powers an entire crypto currency. DAI, a crypto currency handled by a ERC20 token contract, with a few lines of code has a market cap of more than $5B at the time of this writing!
 
-![](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/dcc9b6b1-e38c-4245-a5c4-02ae6600990a.jpg)
+![abcd](https://qb-content-production.s3.ap-south-1.amazonaws.com/public/78dcb276-2464-4575-b984-756b538f3921/dcc9b6b1-e38c-4245-a5c4-02ae6600990a.jpg)
 
 I recommend you to read the lines 120-167, which is the meat of the contract. You should be able to follow what is happening there. We’ve written similar code already in our smart contract, if not more complex!
 
